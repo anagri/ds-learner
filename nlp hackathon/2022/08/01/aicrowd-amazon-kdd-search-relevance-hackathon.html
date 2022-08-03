@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>AICrowd Amazon KDD Search Relevance Hackathon Experience | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="AICrowd Amazon KDD Search Relevance Hackathon Experience" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sharing experience of my participation in Amazon KDD Cup Challenge" />
+<meta property="og:description" content="Sharing experience of my participation in Amazon KDD Cup Challenge" />
+<link rel="canonical" href="https://anagri.github.io/ds-learner/nlp%20hackathon/2022/08/01/aicrowd-amazon-kdd-search-relevance-hackathon.html" />
+<meta property="og:url" content="https://anagri.github.io/ds-learner/nlp%20hackathon/2022/08/01/aicrowd-amazon-kdd-search-relevance-hackathon.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:image" content="https://anagri.github.io/ds-learner/images/chart-preview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-01T00:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://anagri.github.io/ds-learner/images/chart-preview.png" />
+<meta property="twitter:title" content="AICrowd Amazon KDD Search Relevance Hackathon Experience" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-01T00:00:00-05:00","datePublished":"2022-08-01T00:00:00-05:00","description":"Sharing experience of my participation in Amazon KDD Cup Challenge","headline":"AICrowd Amazon KDD Search Relevance Hackathon Experience","image":"https://anagri.github.io/ds-learner/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://anagri.github.io/ds-learner/nlp%20hackathon/2022/08/01/aicrowd-amazon-kdd-search-relevance-hackathon.html"},"url":"https://anagri.github.io/ds-learner/nlp%20hackathon/2022/08/01/aicrowd-amazon-kdd-search-relevance-hackathon.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ds-learner/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://anagri.github.io/ds-learner/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/ds-learner/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ds-learner/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ds-learner/about/">About Me</a><a class="page-link" href="/ds-learner/search/">Search</a><a class="page-link" href="/ds-learner/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">AICrowd Amazon KDD Search Relevance Hackathon Experience</h1><p class="page-description">Sharing experience of my participation in Amazon KDD Cup Challenge</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-01T00:00:00-05:00" itemprop="datePublished">
+        Aug 1, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      9 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/ds-learner/categories/#nlp hackathon">nlp hackathon</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/anagri/ds-learner/tree/master/_notebooks/2022-08-01-aicrowd-amazon-kdd-search-relevance-hackathon.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/ds-learner/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/anagri/ds-learner/master?filepath=_notebooks%2F2022-08-01-aicrowd-amazon-kdd-search-relevance-hackathon.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/ds-learner/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/anagri/ds-learner/blob/master/_notebooks/2022-08-01-aicrowd-amazon-kdd-search-relevance-hackathon.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/ds-learner/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fanagri%2Fds-learner%2Fblob%2Fmaster%2F_notebooks%2F2022-08-01-aicrowd-amazon-kdd-search-relevance-hackathon.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/ds-learner/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#About">About </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Task-1---Query-Product-Ranking">Task 1 - Query Product Ranking </a></li>
+<li class="toc-entry toc-h2"><a href="#Task-2---Multiclass-Product-Classification">Task 2 - Multiclass Product Classification </a></li>
+<li class="toc-entry toc-h2"><a href="#Task-3---Product-Subtitute-Identification">Task 3 - Product Subtitute Identification </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Phase-1:-Baseline">Phase 1: Baseline </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Step-1:-Retrofit-the-Baseline-into-AICrowd-Submission-format">Step 1: Retrofit the Baseline into AICrowd Submission format </a></li>
+<li class="toc-entry toc-h2"><a href="#Step-2:-Training-the-Model-and-making-the-first-real-submission">Step 2: Training the Model and making the first real submission </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Phase-2:-Improving-the-Baseline">Phase 2: Improving the Baseline </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Exploratory-Data-Analysis">Exploratory Data Analysis </a></li>
+<li class="toc-entry toc-h2"><a href="#Iteration-1:-Including-more-fields-in-model-training">Iteration 1: Including more fields in model training </a></li>
+<li class="toc-entry toc-h2"><a href="#Iteration-2:-Unifying-the-Model">Iteration 2: Unifying the Model </a></li>
+<li class="toc-entry toc-h2"><a href="#Iteration-3:-Fixing-Training-Data">Iteration 3: Fixing Training Data </a></li>
+<li class="toc-entry toc-h2"><a href="#Iteration-4:-Deeper-Training">Iteration 4: Deeper Training </a></li>
+<li class="toc-entry toc-h2"><a href="#Submission-Pile-Up">Submission Pile-Up </a></li>
+<li class="toc-entry toc-h2"><a href="#Conclusion">Conclusion </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-08-01-aicrowd-amazon-kdd-search-relevance-hackathon.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="About">
+<a class="anchor" href="#About" aria-hidden="true"><span class="octicon octicon-link"></span></a>About<a class="anchor-link" href="#About"> </a>
+</h1>
+<p><a href="https://www.aicrowd.com/challenges/esci-challenge-for-improving-product-search#timeline">Amazon KDD Cup Challenge</a> is a hackathon hosted by <a href="https://www.aicrowd.com/">AICrowd</a> platform. The hackathon involves improving the customer experience and engagement by improving the search relevance significantly using the cutting edge research in the fields of Search, NLP and Embeddings.</p>
+<p>The dataset included &gt; 130k queries, &gt; 1M product catalogs, &gt; 2.6M judgements, with data distributed across us, es and jp locales. It is one of the largest multi-lingual search relevance based dataset I have seen in hackathons.</p>
+<p>The hackthon was kicked off on March 15th 2002, with the final submission on July 20th 2022.</p>
+<p>The hackathon involves 3 separate tasks of improving the identification of products as per ESCI (Exact, Substitute, Complement, Irrelevant) categories.</p>
+<h2 id="Task-1---Query-Product-Ranking">
+<a class="anchor" href="#Task-1---Query-Product-Ranking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Task 1 - Query Product Ranking<a class="anchor-link" href="#Task-1---Query-Product-Ranking"> </a>
+</h2>
+<p>Given a search query, rank potential product matches based on their relevance</p>
+<h2 id="Task-2---Multiclass-Product-Classification">
+<a class="anchor" href="#Task-2---Multiclass-Product-Classification" aria-hidden="true"><span class="octicon octicon-link"></span></a>Task 2 - Multiclass Product Classification<a class="anchor-link" href="#Task-2---Multiclass-Product-Classification"> </a>
+</h2>
+<p>Given a asearch query and product pair, classify the pair among as ESCI category</p>
+<h2 id="Task-3---Product-Subtitute-Identification">
+<a class="anchor" href="#Task-3---Product-Subtitute-Identification" aria-hidden="true"><span class="octicon octicon-link"></span></a>Task 3 - Product Subtitute Identification<a class="anchor-link" href="#Task-3---Product-Subtitute-Identification"> </a>
+</h2>
+<p>Given a search query and product pair, predict if product partially fulfills the search criteria and can be used as functional substitute</p>
+<p>Apart from the cash prizes, the winners of the KDD Cup challenge will also get a chance to showcase their winning approach as paper in SIGKDD Conference 2022.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>I only attempted task 1, as I joined the competition very late and wanted to focus on getting a better rank in one task, than baseline in all 3. I will share my experience solving for task 1 here.</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Phase-1:-Baseline">
+<a class="anchor" href="#Phase-1:-Baseline" aria-hidden="true"><span class="octicon octicon-link"></span></a>Phase 1: Baseline<a class="anchor-link" href="#Phase-1:-Baseline"> </a>
+</h1>
+<p>The Amazon KDD Challenge also provided a <a href="https://github.com/amazon-research/esci-code">baseline code</a> and accompanying paper detailing the baseline approach.</p>
+<p>For task 1 - query product ranking, the baseline approach used MS MARCO Cross Encoders for US, and multilingua MPNet for ES and JP locales.</p>
+<p>I used this baseline as a starting point, and iteratively refined my approach to improve on the results.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Step-1:-Retrofit-the-Baseline-into-AICrowd-Submission-format">
+<a class="anchor" href="#Step-1:-Retrofit-the-Baseline-into-AICrowd-Submission-format" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: Retrofit the Baseline into AICrowd Submission format<a class="anchor-link" href="#Step-1:-Retrofit-the-Baseline-into-AICrowd-Submission-format"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For submission, we had to fork a baseline repository on AICrowd Gitlab. Tags pushed to this repository with name "submission-*" were picked by the CI server and executed to produce predictions.</p>
+<p>The template repo provided with <code>run.py</code>, which had a dummy implementation for prediction. Just to test, end-to-end was working fine, checked in the dummy implementation, and pushed the changes. To trigger the CI and evaluation step, created git tag <code>submission-initial-version</code> and pushed the tag to remote.</p>
+<p>As expected, the tag was picked by the CI process, and after a bit of wait, the server gave me my first result:</p>
+
+<pre><code>🏆 Scores
+NDCG Score : 0.7486</code></pre>
+<p>With this, I had a spot on the leaderboard as well ☺️.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Step-2:-Training-the-Model-and-making-the-first-real-submission">
+<a class="anchor" href="#Step-2:-Training-the-Model-and-making-the-first-real-submission" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: Training the Model and making the first real submission<a class="anchor-link" href="#Step-2:-Training-the-Model-and-making-the-first-real-submission"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Suprisingly, the baseline solutions provided on github, and baseline repositories forked on gitlab differed quite a lot in their structure. So to get started, one had to really understand the esci-baseline, copy over the training and predictions components, and plug-in with the forked aicrowd gitlab baseline.</p>
+<p>IMHO, much time could have been saved if there was consistency between both of these repos.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As a golden rule of any Machine Learning project, my first goal was to get a baseline submission through, and then iteratively tweek my approach to better result.</p>
+<p>Once, I refactored and merged the 2 baseline repos provided in a working condition on my machine, the next was to get my model trained.</p>
+<p>I used <a href="https://lambdalabs.com/">lambdalabs.com</a> as my cloud GPU provider as its pay-as-you-use approach, and array of GPU selections satisfied my requirements.</p>
+<p>I pushed my changes to AICrowd gitlab, and cloned it back on the lambdalabs persistent storage disk. I also setup a virtual env on the persistent disk so as not to set it up everytime I spin my VM.</p>
+<p><strong>Basic profiling showed me the baseline approach was not optimized or utilized multiple GPUs, so I stick to low-cost GPUs (A6000, $0.80/hr) for training the model.</strong></p>
+<p>Once my model was trained, I tested a dummy evaluation cycle on the VM itself, and it produced the <code>results.csv</code>. This gave me confidence that all the pieces of code are working as expected. Then, I checked my model files using <code>git-lfs</code> and pushed the code to AICrowd repos. To trigger the CI step, I created the git tag <code>submission-initial-version</code> and pushed to remote.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Once my model was trained, I tested a dummy evaluation cycle on the VM itself, and it produced the <code>results.csv</code>. This gave me confidence that all the pieces of code are working as expected. Then, I checked my large model files using <code>git-lfs</code> and pushed the code to AICrowd repos. To trigger the CI step, I created the git tag <code>submission-baseline</code> and pushed to remote.</p>
+<p>This tag failed, as on the CI setup, the products-catalogue file was missing. This took sometime to debug as even the git logs were not available. I raised the issue on discussion board and discord. I was advised to check in the catalogue file, so I did.</p>
+<p>After some attempts, the tag went through and produced result based on the model:</p>
+
+<pre><code>🏆 Scores
+NDCG Score : 0.8505</code></pre>
+<p>An increase of ~0.1 from the random prediction version. Good start but not as much as I was hoping for. With this my ranking improved significantly on leaderboard and was under 20.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Phase-2:-Improving-the-Baseline">
+<a class="anchor" href="#Phase-2:-Improving-the-Baseline" aria-hidden="true"><span class="octicon octicon-link"></span></a>Phase 2: Improving the Baseline<a class="anchor-link" href="#Phase-2:-Improving-the-Baseline"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exploratory-Data-Analysis">
+<a class="anchor" href="#Exploratory-Data-Analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I started off with basic EDA on the data. Few of the results of data exploration that I later incorporated in my model:</p>
+<ol>
+<li>There were other fields in the data which had rich information. In the baseline, we were only using the title field, so there was a venue to improve prediction including other fields as well</li>
+<li>There were some missing fields, but overall, there were only few rows where all the fields were missing</li>
+<li>The non-alphanum/symbols in the data were of significant context as they represented some domain information. E.g. <code>#</code> was extensively used to denote the size or model of the object like lipstick, pen etc. So in general, clean up of data was limited to removing unnecessary spaces, and lowercasing for consistency</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Iteration-1:-Including-more-fields-in-model-training">
+<a class="anchor" href="#Iteration-1:-Including-more-fields-in-model-training" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iteration 1: Including more fields in model training<a class="anchor-link" href="#Iteration-1:-Including-more-fields-in-model-training"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As next step, I included all the fields after doing clean up in the model training. The code looked like:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># cleaning title</span>
+<span class="n">df_p</span><span class="p">[</span><span class="n">col_title_clean</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_p</span><span class="p">[</span><span class="n">col_product_title</span><span class="p">]</span> \
+    <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> \
+    <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">replace_pattern</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"\s{2,}"</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="c1"># ...</span>
+
+<span class="c1"># merging all fields under a single field for training</span>
+<span class="n">df_p</span><span class="p">[</span><span class="n">col_text_all</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_p</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="s1">'&lt;id&gt; '</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="n">col_product_id</span><span class="p">]</span> <span class="o">+</span> <span class="s1">' &lt;id&gt;'</span> <span class="o">+</span> \
+               <span class="s1">' &lt;title&gt; '</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="n">col_title_clean</span><span class="p">]</span> <span class="o">+</span> <span class="s1">' &lt;title&gt;'</span> <span class="o">+</span> \
+               <span class="s1">' &lt;brand&gt; '</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="n">col_product_brand</span><span class="p">]</span> <span class="o">+</span> <span class="s1">' &lt;brand&gt;'</span> <span class="o">+</span> \
+               <span class="s1">' &lt;color&gt; '</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="n">col_color_clean</span><span class="p">]</span> <span class="o">+</span> <span class="s1">' &lt;color&gt;'</span> <span class="o">+</span> \
+               <span class="s1">' &lt;desc&gt; '</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="n">col_description_clean</span><span class="p">]</span> <span class="o">+</span> <span class="s1">' &lt;desc&gt;'</span> <span class="o">+</span> \
+               <span class="s1">' &lt;bullet&gt; '</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="n">col_bullet_clean</span><span class="p">]</span> <span class="o">+</span> <span class="s1">' &lt;bullet&gt;'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># code-block-end</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I was hoping this would give significant boost to my result, but I got the results below for above changes:</p>
+
+<pre><code>🏆 Scores
+NDCG Score : 0.8404</code></pre>
+<p>This was a ~0.01 drop to my previous result where I was only including the title field. There was something wrong with my approach that I needed to debug.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Iteration-2:-Unifying-the-Model">
+<a class="anchor" href="#Iteration-2:-Unifying-the-Model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iteration 2: Unifying the Model<a class="anchor-link" href="#Iteration-2:-Unifying-the-Model"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The baseline was having different models and approaches based on locale. So in all, it had 3 different models for each of the 3-locales - US, ES and JP. This was making it hard to optimize as you need to take multiple approaches based on locale. I thought of testing if having a single multi-lingual model and a uniform approach would provide a comparative result, and then take steps to optimize my results.</p>
+<p>I chose <code>cross-encoder/mmarco-mMiniLMv2-L12-H384-v1</code> as it was the same cross-encoder model, but having multi-lingual support. Luckily, it also had support for ES and JP locales.</p>
+<p>So I ditched the esci-baseline approach of 3 different models, and trained all of my data on this single model and got the result:</p>
+
+<pre><code>🏆 Scores
+NDCG Score : 0.8813</code></pre>
+<p>Awesome, not only I got better result from this approach, the boost was a significant ~0.03 over my last best result, and ~0.04 over my approach of including more fields for training.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Iteration-3:-Fixing-Training-Data">
+<a class="anchor" href="#Iteration-3:-Fixing-Training-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iteration 3: Fixing Training Data<a class="anchor-link" href="#Iteration-3:-Fixing-Training-Data"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>During the EDA, I saw a pattern in the training data provided. There were rows in the data where query_id was same, but query_text differed, and then there were rows, where query_text was same but query_id were different. A hunch was that the data was tampered to create randomness.</p>
+<p>I decided to fix this issue and see if the model performance improved. I grouped the rows by query_text, and then reset the query_id to match them. This was because the ESCI label matched more with query_text than with query_id.</p>
+<p>I was hoping some improvement in model performance, but the result remained same:</p>
+
+<pre><code>🏆 Scores
+NDCG Score : 0.8813</code></pre>
+<p>No worries, on to next iteration and keeping fingers crossed for result improvement.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Iteration-4:-Deeper-Training">
+<a class="anchor" href="#Iteration-4:-Deeper-Training" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iteration 4: Deeper Training<a class="anchor-link" href="#Iteration-4:-Deeper-Training"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After exploring multiple venues and not finding any promising leads on improving the performance, last arrow in my quiver was to train the model deeper. Earlier I was training the model for a single epoch, I increased it to 3 to see if it improved the performance. The result I got was:</p>
+
+<pre><code>🏆 Scores
+NDCG Score : 0.8847</code></pre>
+<p>An improvement of ~0.003. Though this helped with ranking, but also took thrice as longer to train and as much the cost.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Submission-Pile-Up">
+<a class="anchor" href="#Submission-Pile-Up" aria-hidden="true"><span class="octicon octicon-link"></span></a>Submission Pile-Up<a class="anchor-link" href="#Submission-Pile-Up"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As the hackathon came to a close, there was a rush of submission in the last few days. This resulted in wait time as much as 18hrs. This was a bit demotivating in the last stretch.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conclusion">
+<a class="anchor" href="#Conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion<a class="anchor-link" href="#Conclusion"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the end, I was happy with the hard-work I put up in this hackathon. I learned a lot about NLP, Sentence Vectors etc., and was able to put in my learning in a very close-to-real- business problem</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/ds-learner/nlp%20hackathon/2022/08/01/aicrowd-amazon-kdd-search-relevance-hackathon.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ds-learner/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/ds-learner/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ds-learner/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/ds-learner/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/ds-learner/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
